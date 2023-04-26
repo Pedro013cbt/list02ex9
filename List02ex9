@@ -1,0 +1,43 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) 
+ {  
+  
+       double peso, altura, r;
+        string sexo;
+
+        Console.WriteLine("Digite o peso, altura e sexo da pessoa:");
+        peso = double.Parse(Console.ReadLine());
+        altura = double.Parse(Console.ReadLine());
+        sexo = Console.ReadLine();
+
+        r = peso / (altura * altura);
+
+        if (sexo == "feminino" || sexo == "Feminino")
+        {
+            if (r < 19) {
+                Console.WriteLine("Abaixo do peso.");
+            } else if (r>=19 || r < 24) {
+                Console.WriteLine("Peso ideal.");
+            } else
+            {
+                Console.WriteLine("Acima do peso.");
+            }
+        }
+        else if (sexo == "masculino" || sexo == "Masculino")
+        {
+            if (r < 20) {
+                Console.WriteLine("Abaixo do peso.");
+            } else if ( r>=20 || r <=25) {
+                Console.WriteLine("Peso ideal.");
+            } else
+            {
+                Console.WriteLine("Acima do peso.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Sexo inválido."); 
+  
+}
